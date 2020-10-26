@@ -1,5 +1,6 @@
 ---
-title: "IODS course project"
+title: "IODS course project 2020"
+author: "Jopi J. W. Mikkonen"
 output:
   html_document:
     theme: cosmo
