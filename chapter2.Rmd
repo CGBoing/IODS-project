@@ -6,10 +6,8 @@
 - Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods.
 - Assume the reader has no previous knowledge of your data or the more advanced methods you are using.
 
-Possibilities and functions of GitHub. I've used Azure Repos before, so ###
+Possibilities and functions of GitHub. I've used Azure Repos with Git before, so I'm confident I'll be getting up to speed quickly. 
 
 ```{r}
 date()
 ```
-
-Here we go again...
