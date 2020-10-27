@@ -2,13 +2,44 @@
 
 <!-- *Describe the work you have done this week and summarize your learning.* -->
 
-Getting acquainted with RMarkdown.
+Getting acquainted with RMarkdown and GitHub.
+I've used Azure Repos with Git before, so I'm confident I'll be getting up to speed quickly. 
 
 <!-- - Describe your work and results clearly.  -->
 <!-- - Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods. -->
 <!-- - Assume the reader has no previous knowledge of your data or the more advanced methods you are using. -->
 
-Excited to learn the possibilities and functions of GitHub. I've used Azure Repos with Git before, so I'm confident I'll be getting up to speed quickly. 
+
+## RMarkdown playground
+
+Here I am testing what RMarkdown offers.
+
+### Highlighting
+
+Here's some **bold text**, or would you like it _italic_?
+Didn't find underlining though, so let's just ~~strike it through~~.
+Maybe some ^superscripting^?
+
+### Lists
+
+* I am a bullet point.
+* Me too!
+
+### Links
+
+[Thurrott.com - The Home for Tech Enthusiasts: News, Reviews & Analysis](https://www.thurrott.com)  
+[Precipitation in Finland](https://en.ilmatieteenlaitos.fi/rain-and-cloudiness)  
+[Official R documentation](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)  
+
+### Code
+
+```{r}
+
+c(1:5)
+
+```
+
+
 
 <!-- ```{r} -->
 <!-- date() -->
