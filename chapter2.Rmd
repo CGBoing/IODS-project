@@ -2,12 +2,13 @@
 
 <!-- *Describe the work you have done this week and summarize your learning.* -->
 
+Getting acquainted with RMarkdown.
+
 <!-- - Describe your work and results clearly.  -->
 <!-- - Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods. -->
 <!-- - Assume the reader has no previous knowledge of your data or the more advanced methods you are using. -->
 
 Excited to learn the possibilities and functions of GitHub. I've used Azure Repos with Git before, so I'm confident I'll be getting up to speed quickly. 
-
 
 <!-- ```{r} -->
 <!-- date() -->
