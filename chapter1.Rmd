@@ -8,6 +8,20 @@ October 2020
 
 Introduction to Open Data Science.
 
+Find my course repository at [github.com/CGBoing/IODS-project](https://github.com/CGBoing/IODS-project)
+
+# Here I am testing some R Markdown features
+
+## Highlighting
+
+## Lists
+
+## Links
+
+[Thurrott.com - The Home for Tech Enthusiasts: News, Reviews & Analysis](https://www.thurrott.com)  
+[Precipitation in Finland](https://en.ilmatieteenlaitos.fi/rain-and-cloudiness)  
+[Official R documentation](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)  
+
 <!-- ```{r} -->
 <!-- # This is a so-called "R chunk" where you can write R code. -->
 
