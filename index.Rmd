@@ -22,8 +22,37 @@ output:
 ***
   
 ```{r child = "chapter2.Rmd"}
-# This will include Chapter 2 (that is updated in its own file) in the document.
 ```
 
 ***
+
+<!-- ```{r child = "chapter3.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
+
+<!-- ```{r child = "chapter4.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
+
+<!-- ```{r child = "chapter5.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
+
+<!-- ```{r child = "chapter6.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
+
+<!-- ```{r child = "chapter7.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
+
+<!-- ```{r child = "chapter8.Rmd"} -->
+<!-- ``` -->
+
+<!-- *** -->
 
