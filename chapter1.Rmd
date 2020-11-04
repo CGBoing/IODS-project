@@ -25,7 +25,7 @@ R has quite interesting syntax. MATLAB is more familiar to me via my line of wor
 <!-- - Assume the reader has an introductory course level understanding of writing and reading R code as well as statistical methods. -->
 <!-- - Assume the reader has no previous knowledge of your data or the more advanced methods you are using. -->
 
-Learning some useful key commands. What might be the fastest way from my keyboard to GitHub. Maybe I'll formulate some ideas for scripts.
+Learning some useful key commands. What might be the fastest way from my keyboard to GitHub. Maybe I'll formulate some ideas for automation scripts.
 It's not just an obsession with speed -- trying out things in quick succession is efficient learning tactic.
 
 ## RMarkdown playground
