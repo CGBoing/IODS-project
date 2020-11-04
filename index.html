@@ -496,9 +496,12 @@ summary {
 <div id="exercise-2" class="section level1">
 <h1>Exercise 2</h1>
 <p>Wait for it…</p>
-<!-- ```{r} -->
-<!-- date() -->
-<!-- ``` -->
+<pre class="r"><code>PROJECT_DIR &lt;- getwd()
+DATA_FOLDER &lt;- paste(PROJECT_DIR, &quot;/data&quot;, sep=&quot;&quot;)
+setwd(DATA_FOLDER)
+test &lt;- read.csv(&quot;learning2014.csv&quot;)
+dim(test)</code></pre>
+<pre><code>## [1] 183  61</code></pre>
 <hr />
 <!-- ```{r child = "chapter3.Rmd"} -->
 <!-- ``` -->

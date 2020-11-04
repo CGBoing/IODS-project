@@ -2,6 +2,10 @@
 
 Wait for it...
 
-<!-- ```{r} -->
-<!-- date() -->
-<!-- ``` -->
+```{r}
+PROJECT_DIR <- getwd()
+DATA_FOLDER <- paste(PROJECT_DIR, "/data", sep="")
+setwd(DATA_FOLDER)
+test <- read.csv("learning2014.csv")
+dim(test)
+```
