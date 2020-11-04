@@ -3,10 +3,15 @@
 Wait for it...
 
 
-```{r, echo=FALSE}
+```{r}
+library(ggplot2)
+library(GGally)
 test <- read.csv("./data/learning2014.csv")
 ```
 ```{r}
 dim(test)
 str(test)
+# ggplot(test, aes(x = stra, y = surf, col = gender))
+qplot(attitude, points, data = test) + geom_smooth(method = "lm")
+ggpairs(test, mapping = aes(col = gender, alpha = 0.3), lower = list(combo = wrap("facethist", bins = 20)))
 ```
