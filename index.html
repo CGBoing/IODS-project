@@ -496,12 +496,17 @@ summary {
 <div id="exercise-2" class="section level1">
 <h1>Exercise 2</h1>
 <p>Wait for it…</p>
-<pre class="r"><code>PROJECT_DIR &lt;- getwd()
-DATA_FOLDER &lt;- paste(PROJECT_DIR, &quot;/data&quot;, sep=&quot;&quot;)
-setwd(DATA_FOLDER)
-test &lt;- read.csv(&quot;learning2014.csv&quot;)
-dim(test)</code></pre>
-<pre><code>## [1] 183  61</code></pre>
+<pre class="r"><code>dim(test)</code></pre>
+<pre><code>## [1] 166   7</code></pre>
+<pre class="r"><code>str(test)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    166 obs. of  7 variables:
+##  $ gender  : chr  &quot;F&quot; &quot;M&quot; &quot;F&quot; &quot;M&quot; ...
+##  $ age     : int  53 55 49 53 49 38 50 37 37 42 ...
+##  $ attitude: num  3.7 3.1 2.5 3.5 3.7 3.8 3.5 2.9 3.8 2.1 ...
+##  $ deep    : num  3.58 2.92 3.5 3.5 3.67 ...
+##  $ stra    : num  3.38 2.75 3.62 3.12 3.62 ...
+##  $ surf    : num  2.58 3.17 2.25 2.25 2.83 ...
+##  $ points  : int  25 12 24 10 22 21 21 31 24 26 ...</code></pre>
 <hr />
 <!-- ```{r child = "chapter3.Rmd"} -->
 <!-- ``` -->
