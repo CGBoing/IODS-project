@@ -1,6 +1,7 @@
 # Exercise 2
 
 The created data (*learning2014.csv*) is read into a variable and necessary libraries are loaded (*ggplot2* and *GGally* for creating plots).
+The data creation script can be found [here](https://github.com/CGBoing/IODS-project/blob/master/data/create_learning2014.R).
 
 ```{r}
 library(ggplot2)
@@ -39,6 +40,7 @@ ggpairs(learning_survey_data, mapping = aes(col = gender, alpha = 0.3), lower = 
 
 ```
 
+Most variables appear to be evenly distributed.
 The *attitude* variable has significantly higher correlation coefficient with *points* than other variables.
 
 ## Regression model fitting
@@ -47,32 +49,37 @@ Attitude, strategic learning and surface approach are used as explanatory variab
 
 ```{r}
 # Creating a linear model
-exam_points_model <- lm(points ~ attitude + stra + surf, data = learning_survey_data)
+exam_points_model <- lm(points ~ attitude + stra + deep, data = learning_survey_data)
 summary(exam_points_model)
 ```
 
 By adjusting the linear model by removing the least significant variable, a better model might be obtained.
-The variable to be removed in this case will be *surf*.
+The variables to be removed in this case will be *stra* and *deep*, as their t-values indicate relatively low significance.
+Now we've obtained a regression model with single explanatory variable.
 
 ```{r}
 # Adjusting the linear model slightly
-exam_points_model <- lm(points ~ attitude + stra, data = learning_survey_data)
+exam_points_model <- lm(points ~ attitude, data = learning_survey_data)
 ```
 
 ## Model summary
 
+The adjusted model is summarized here:
+
 ```{r}
 summary(exam_points_model)
+ggplot(learning_survey_data, aes(x = attitude, y = points, col = gender)) + geom_point() + geom_smooth(method = "lm")
 ```
 
-The R squared value tells that the variables explain 21% of the response variable *points*.
+The R squared value tells that the variables explain 19% of the response variable *points*.
 
 ## Model validation
 
 ```{r}
-# ggplot(learning_survey_data, aes(x = stra, y = surf, col = gender))
-
+# Printing the graphs: Residuals vs Fitted; Normal Q-Q; Residuals vs Leverage
 par(mfrow = c(2,2))
 plot(exam_points_model, which = c(1,2,5))
 
 ```
+
+The plots indicate fairly good fitting. However, a very slight curvature is to be observed.
