@@ -1,17 +1,78 @@
 # Exercise 2
 
-Wait for it...
-
+The created data (*learning2014.csv*) is read into a variable and necessary libraries are loaded (*ggplot2* and *GGally* for creating plots).
 
 ```{r}
 library(ggplot2)
 library(GGally)
-test <- read.csv("./data/learning2014.csv")
+learning_survey_data <- read.csv("./data/learning2014.csv", header = TRUE)
 ```
+
+## Description of the data
+
+The data under scrutiny is derived from a student survey about approaches to learning.
+Original data consists of 183 participants.
+However, for this analysis, those with no exam points were omitted, leaving the total number to 166.
+
 ```{r}
-dim(test)
-str(test)
-# ggplot(test, aes(x = stra, y = surf, col = gender))
-qplot(attitude, points, data = test) + geom_smooth(method = "lm")
-ggpairs(test, mapping = aes(col = gender, alpha = 0.3), lower = list(combo = wrap("facethist", bins = 20)))
+dim(learning_survey_data)
+str(learning_survey_data)
+```
+
+The analysis variables are as follows:
+
+* **Gender**
+* **Age**
+* **Attitude**: Attitude towards learning statistics.
+* **Deep**: deep approach mainly is built upon understanding, self-reflection and seeking additional information
+* **Stra**: strategic approach measures study organization and time management.
+* **Surf**: surface approach comprises motivation and superficial reasons for studying.
+* **Points**: points awarded from the exam.
+
+## Overview of the data
+
+A scatterplot of all variables is presented as follows:
+
+```{r}
+# Printing the general scatterplot
+ggpairs(learning_survey_data, mapping = aes(col = gender, alpha = 0.3), lower = list(combo = wrap("facethist", bins = 20)))
+
+```
+
+The *attitude* variable has significantly higher correlation coefficient with *points* than other variables.
+
+## Regression model fitting
+
+Attitude, strategic learning and surface approach are used as explanatory variables for the exam points outcome.
+
+```{r}
+# Creating a linear model
+exam_points_model <- lm(points ~ attitude + stra + surf, data = learning_survey_data)
+summary(exam_points_model)
+```
+
+By adjusting the linear model by removing the least significant variable, a better model might be obtained.
+The variable to be removed in this case will be *surf*.
+
+```{r}
+# Adjusting the linear model slightly
+exam_points_model <- lm(points ~ attitude + stra, data = learning_survey_data)
+```
+
+## Model summary
+
+```{r}
+summary(exam_points_model)
+```
+
+The R squared value tells that the variables explain 21% of the response variable *points*.
+
+## Model validation
+
+```{r}
+# ggplot(learning_survey_data, aes(x = stra, y = surf, col = gender))
+
+par(mfrow = c(2,2))
+plot(exam_points_model, which = c(1,2,5))
+
 ```

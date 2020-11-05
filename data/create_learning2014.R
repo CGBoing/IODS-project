@@ -1,5 +1,5 @@
 # ==============================================================================
-# Creating a data file from original data:
+# Creating a data analysis file from original student survey data:
 # Data from https://www.mv.helsinki.fi/home/kvehkala/JYTmooc/JYTOPKYS3-data.txt
 # 
 # Jopi J. W. Mikkonen
@@ -10,10 +10,7 @@
 rm(list=ls())
 library(dplyr)
 
-# ==============================================================================
-# HELPER VARIABLES
-# ==============================================================================
-
+# Global constants
 PROJECT_DIR <- getwd()
 DATA_FOLDER <- paste(PROJECT_DIR, "/data", sep="")
 
@@ -53,19 +50,18 @@ lrn14 = data.frame(
 
 # head(lrn14)
 
-# Filtering out the zero-point objects
+# Filtering out those with no exam points
 lrn14 <- filter(lrn14, points > 0)
 
 # Writing the wrangled data into the 'data' folder under the name of 'learning2014.csv'
 setwd(DATA_FOLDER)
-
 write.csv(lrn14, file = "learning2014.csv", row.names = FALSE)
 
 # Demonstrating the data file reading
-test <- read.csv("learning2014.csv", header = TRUE)
-head(test)
-str(test)
-dim(test)
+data_from_file <- read.csv("learning2014.csv", header = TRUE)
+head(data_from_file)
+str(data_from_file)
+dim(data_from_file)
 
 setwd(PROJECT_DIR)
 
@@ -74,7 +70,7 @@ setwd(PROJECT_DIR)
 # ==============================================================================
 
 # Read and examine the example data
-test14 <- read.table("http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/learning2014.txt", sep=",", header=TRUE)
-str(test14)
-dim(test14) # Should be 166 rows and 7 columns
-head(test14)
+# example14 <- read.table("http://s3.amazonaws.com/assets.datacamp.com/production/course_2218/datasets/learning2014.txt", sep=",", header=TRUE)
+# str(example14)
+# dim(example14) # Should be 166 rows and 7 columns
+# head(example14)
