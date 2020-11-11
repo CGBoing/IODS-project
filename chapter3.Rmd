@@ -1,0 +1,39 @@
+# Exercise 3
+
+The created data (*alc.csv*) is read into a variable and necessary libraries are loaded (*ggplot2* and *GGally* for creating plots).
+The data creation script can be found [here](https://github.com/CGBoing/IODS-project/blob/master/data/create_alc.R).
+
+```{r}
+library(ggplot2)
+library(GGally)
+library(dplyr)
+alc_survey_data <- read.csv("./data/alc.csv", header = TRUE)
+```
+
+## Description of the data
+
+[Data information](https://archive.ics.uci.edu/ml/datasets/Student+Performance)
+
+## Possible factors related to alcohol consumption
+
+Let's select 4 variables that might be related to alcohol consumption:
+
+|Variable|Short name|Justification/hypothesis|
+|--------|----------|------------------------|
+|Nursery school attendance|*nursery*|higher activity|
+|Extra-curricular activities|*activities*||
+||||
+|In a romantic relationship|*romantic*|being in a romantic relationship could be __|
+
+## Testing the hypothesis
+
+
+
+```{r}
+logistic_model <- glm(high_use ~ failures + absences + sex, data = alc_survey_data, family = "binomial")
+summary(logistic_model)
+coef(logistic_model)
+odds_ratios <- coef(logistic_model) %>% exp
+confidence_intervals <- confint(logistic_model) %>% exp
+cbind(odds_ratios, confidence_intervals) # print
+```

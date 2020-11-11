@@ -1,6 +1,6 @@
 # ==============================================================================
 # Creating a data analysis file from original student survey data:
-# Data from https://www.mv.helsinki.fi/home/kvehkala/JYTmooc/JYTOPKYS3-data.txt
+# originally from https://www.mv.helsinki.fi/home/kvehkala/JYTmooc/JYTOPKYS3-data.txt
 # 
 # Jopi J. W. Mikkonen
 # 5th November 2020
